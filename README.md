@@ -1,2 +1,2 @@
 # TPInfo
-Ce repo regroupera toute les corrections des TPs du cours INFO2009
+Ce repo regroupera toutes les corrections des TPs du cours INFO2009
