@@ -1,25 +1,37 @@
 #include <stdio.h>
 
-void main (){
-    long long n;
+int main (){
+    unsigned int a; //Car a ne prendra jamais de valer négatives
     printf("Entrez un entier : ");
-    scanf("%lld", &n);
-    if (n<2){
-        printf("%lld n'est pas premier\n", n);
-        return;
+    scanf("%u", &a);
+    if (a==0){
+        printf("%u n'est pas premier\n", a);
+        return 0;
     }
-    if (n==2){
-        printf("%lld est premier\n", n);
-        return;
+
+    //Avec un while
+    unsigned int div=2;
+    while (div*div <=a){
+        if (a%div==0){
+            printf("%u n'est pas premier", a);
+            printf("Il est divisible par %u\n", div);
+            return 0; // On arrête le programme si on trouve un diviseur 
+        }
+        div++;
     }
-    if
-    for (long long i=3; i*i <=n; i+=2){
-        if (n%i==0){
-            printf("%lld n'est pas premier\n", n);
-            printf("Il est divisible par %lld\n", i);
-            return;
+
+    //Avec un for:
+    /*
+    for (unsigned int div=2;div*div<=a;div++){
+        if (a%div==0){
+            printf("%u n'est pas premier", a);
+            printf("Il est divisible par %u\n", div);
+            return 0;
         }
     }
-    printf("%lld est premier\n", n);
-    return;
+    */
+
+
+    printf("%u est premier\n", a);
+    return 0;
 }

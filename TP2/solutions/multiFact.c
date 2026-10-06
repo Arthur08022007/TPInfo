@@ -1,14 +1,28 @@
-#include <stdio.h>
+#include <stdio.h> //Nécessaire pour printf et scanf
 
 int main(){
-    int n, k;
+    unsigned int n, k; //Car n ne prendra jamais de valeurs négatives tout comme k
     printf("Entrez deux entiers: ");
-    scanf("%d %d", &n, &k);
-    int result = 1;
-    for (;n-k>0;n-=k){
-        result *= n;
+    scanf("%u %u", &n, &k);
+    unsigned int resultat = 1;
+    
+    //Avec while
+    int mult = n; //Car à la dernière exécution de la boucle, mult prendra une valeur négative (pour ainsi être rejeté par le gardien de boucle)
+    while(mult > 0){
+        resultat*=mult;
+        mult -= k; // Equivalent à mult = mult - k
+
     }
-    printf("Le résultat est: %d\n", result);
+
+
+    //Avec un for:
+    /*
+    for (int mult = n;mult>0;i++;mult-=k){
+        resultat*=mult;
+    }
+    */
+
+    printf("Le résultat est: %u\n", resultat);
     return 0;
     
 }
