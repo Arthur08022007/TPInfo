@@ -27,8 +27,6 @@ int main (){
     }
     printf("Le %uème nombre de la suite est %llu\n",indice, F3);
     return 0;
-
-    
 }
 
 
