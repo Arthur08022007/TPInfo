@@ -23,7 +23,8 @@ int main (){
         
         F2=F3;
     }
-    return F2;
+    printf("Le nombre de la suite à l'indice %d est %llu\n", indice, F2);
+    return 0;
 }
 
 
