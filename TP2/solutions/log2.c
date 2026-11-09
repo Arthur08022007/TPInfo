@@ -13,13 +13,6 @@ int main() {
         
     }
 
-    //Avec un for:
-    /*
-    for (unsigned int i=0;n>=2;i++){
-        n=n/2;
-    }
-    */
-
     printf("La partie entière du logarithme en base 2 de %lld est %d\n", n_copy, i);
     return 0;
 }

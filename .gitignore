@@ -3,6 +3,8 @@
 
 build/
 
+*:Zone.Identifier
+
 # Object files
 *.o
 *.ko

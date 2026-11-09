@@ -16,17 +16,14 @@ int main (){
         return 0;
     }
     for (unsigned int i=3;i<=indice;i++){
-        printf("Valeur de F1=%llu\n",F1);
-        printf("Valeur de F2=%llu\n\n",F2);
 
         F3=F2+F1;
-        printf("Valeur de F3=%llu\n\n",F3); 
+
         F1=F2;
         
         F2=F3;
     }
-    printf("Le %uème nombre de la suite est %llu\n",indice, F3);
-    return 0;
+    return F2;
 }
 
 
